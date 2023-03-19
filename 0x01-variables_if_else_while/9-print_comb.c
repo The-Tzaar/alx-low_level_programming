@@ -3,27 +3,44 @@
 /**
  * main - Entry point
  *
- * Description: Prints all possible combinations of single-digit numbers,
- * separated by a comma and a space, in ascending order.
+ * Description: Prints all possible combinations of single-digit numbers
+ * separated by ", " in ascending order
  *
  * Return: Always 0 (Success)
  */
 int main(void)
 {
-    int num;
+	int i, j, k;
 
-    for (num = 0; num < 10; num++)
-    {
-        putchar(num + '0');
+	for (i = 0; i < 10; i++)
+	{
+		putchar(i + '0');
+		putchar(',');
+		putchar(' ');
 
-        if (num != 9)
-        {
-            putchar(',');
-            putchar(' ');
-        }
-    }
+		for (j = i + 1; j < 10; j++)
+		{
+			putchar(i + '0');
+			putchar(j + '0');
+			putchar(',');
+			putchar(' ');
 
-    putchar('\n');
-    return (0);
+			for (k = j + 1; k < 10; k++)
+			{
+				putchar(i + '0');
+				putchar(j + '0');
+				putchar(k + '0');
+
+				if (i == 7 && j == 8 && k == 9)
+					continue;
+
+				putchar(',');
+				putchar(' ');
+			}
+		}
+	}
+
+	putchar('\n');
+	return (0);
 }
 
