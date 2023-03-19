@@ -1,32 +1,29 @@
-#include <stdlib.h>
+#include <stdio.h>
+
 /**
  * main - Entry point
  *
- * Prints all possible combinations of single-digit numbers,
- *              separated by a comma and a space, in ascending order.
- *              Uses putchar function.
+ * Description: Prints all possible combinations of single-digit numbers,
+ * separated by a comma and a space, in ascending order.
  *
- * Return: Always EXIT_SUCCESS (0)
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
-	int i = 0;
+    int num;
 
-	for (i = 0; i < 10; i++)
-	{
-		putchar(i + '0');
+    for (num = 0; num < 10; num++)
+    {
+        putchar(num + '0');
 
-		if (i != 10)
-		{
-			putchar(',');
+        if (num != 9)
+        {
+            putchar(',');
+            putchar(' ');
+        }
+    }
 
-			putchar(' ');
-		}
-		i++
-	}
-
-	putchar('\n');
-
-	return (EXIT_SUCCESS);
+    putchar('\n');
+    return (0);
 }
 
