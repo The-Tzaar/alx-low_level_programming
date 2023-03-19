@@ -1,31 +1,33 @@
-#include <stdlib.h>
+#include <stdio.h>
 
 /**
  * main - Entry point
  *
  * Description: Prints all possible different combinations of two digits,
- *              separated by ", " in ascending order, using only putchar.
+ * separated by a comma and a space, in ascending order.
  *
- * Return: Always EXIT_SUCCESS (0)
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
-	 int i, j;
-	 for (i = 0; i < 9; i++)
-	 {
-		 for (j = i + 1; j < 10; j++)
-		 {
-			 putchar(i + '0');
-			 putchar(j + '0');
-			 if (i != 8 || j != 9)
-			 {
-				 putchar(',');
-				 putchar(' ');
-			 }
-		 }
-	 }
-	 
-	 putchar('\n');
-	 return (EXIT_SUCCESS);
+    int num1, num2;
+
+    for (num1 = 0; num1 < 9; num1++)
+    {
+        for (num2 = num1 + 1; num2 <= 9; num2++)
+        {
+            putchar(num1 + '0');
+            putchar(num2 + '0');
+
+            if (num1 != 8 || num2 != 9)
+            {
+                putchar(',');
+                putchar(' ');
+            }
+        }
+    }
+
+    putchar('\n');
+    return (0);
 }
 
