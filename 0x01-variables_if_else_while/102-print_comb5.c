@@ -23,16 +23,13 @@ int main(void)
 			putchar(' ');
 			putchar((n2 / 10) + '0');
 			putchar((n2 % 10) + '0');
-
 			if (n1 < 98)
-				{
-					putchar(',');
-					putchar(' ');
-				}
+			{
+				putchar(',');
+				putchar(' ');
+			}
 		}
 	}
-
 	putchar('\n');
-
 	return (0);
 }
