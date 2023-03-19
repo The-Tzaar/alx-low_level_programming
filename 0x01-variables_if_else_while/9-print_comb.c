@@ -19,6 +19,7 @@ int main(void)
 			putchar(j < 9 ? 32 : 0);
 		}
 	}
+	putchar(10);
 	return (0);
 }
 
