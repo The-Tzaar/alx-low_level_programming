@@ -1,25 +1,19 @@
 #include <stdio.h>
 
 /**
- * main - Prints all possible combinations of single-digit numbers separated
- *        by ", " and in ascending order.
+ * main - main function
  *
- * Return: Always 0.
+ * Return: always 0
  */
 int main(void)
 {
-	int i, j;
+	int i;
 
-	for (i = 0; i < 10; i++)
+	for (i = 0 ; i < 10 ; i++)
 	{
-		for (j = i; j < 10; j++)
-		{
-			putchar(i + 48);
-			putchar(j < 9 ? 44 : 10);
-			putchar(j < 9 ? 32 : 0);
-		}
+		putchar(i + '0');
+		putchar(',');
+		putchar(' ');
 	}
-	putchar(10);
-	return (0);
+	return(0);
 }
-
