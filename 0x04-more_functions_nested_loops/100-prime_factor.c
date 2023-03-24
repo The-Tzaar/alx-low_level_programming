@@ -10,30 +10,28 @@
  */
 long largest_prime_factor(long n)
 {
-    long i, max;
+	long i, max;
 
-    /* divide by 2 until no longer divisible */
-    while (n % 2 == 0)
-    {
-        max = 2;
-        n /= 2;
-    }
+	/* divide by 2 until no longer divisible */
+	while (n % 2 == 0)
+	{
+		max = 2;
+		n /= 2;
+	}
+	/* check odd numbers up to sqrt(n) */
+	for (i = 3; i <= sqrt(n); i += 2)
+	{
+		while (n % i == 0)
+		{
+			max = i;
+			n /= i;
+		}
+	}
+	/* if n is still greater than 2, it is prime */
+	if (n > 2)
+		max = n;
 
-    /* check odd numbers up to sqrt(n) */
-    for (i = 3; i <= sqrt(n); i += 2)
-    {
-        while (n % i == 0)
-        {
-            max = i;
-            n /= i;
-        }
-    }
-
-    /* if n is still greater than 2, it is prime */
-    if (n > 2)
-        max = n;
-
-    return (max);
+	return (max);
 }
 
 /**
@@ -43,10 +41,11 @@ long largest_prime_factor(long n)
  */
 int main(void)
 {
-    long n = 612852475143;
-    long result = largest_prime_factor(n);
+	long n = 612852475143;
 
-    printf("%ld\n", result);
+	long result = largest_prime_factor(n);
 
-    return (0);
+	printf("%ld\n", result);
+
+	return (0);
 }
