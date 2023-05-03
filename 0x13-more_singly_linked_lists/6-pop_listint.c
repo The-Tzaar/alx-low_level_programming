@@ -5,16 +5,19 @@
  * and sets the head pointer to NULL
  * @head: Double pointer to the head of the list
  **/
-void free_listint2(listint_t **head)
+int pop_listint(listint_t **head)
 {
-	listint_t *current;
+	listint_t *temp;
+	int num;
 
-	while (*head != NULL)
-	{
-		current = *head;
-		*head = (*head)->next;
-		free(current);
-	}
+	if (!head || !*head)
+		return (0);
 
-	*head = NULL;
+	num = (*head)->n;
+	temp = (*head)->next;
+	free(*head);
+	*head = temp;
+
+	return (num);
 }
+
