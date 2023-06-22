@@ -1,7 +1,7 @@
 #ifndef CALC_H
 #define CALC_H
 /**
- * structure operation - A structure operation.
+ * struct op - A structure operator.
  * @op: The operator.
  * @f: The associated function pointer.
  */
