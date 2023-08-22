@@ -55,10 +55,12 @@ char *_strchr(char *s, char c);
 /* This function finds the first occurrence of a character in a string. */
 
 unsigned int _strspn(char *s, char *accept);
-/* This function counts the number of characters in a string that are also present in a specified string. */
+/* This function counts the number of characters in a
+ * string that are also present in a specified string. */
 
 char *_strpbrk(char *s, char *accept);
-/* This function finds the first occurrence of any character from a specified string in another string. */
+/* This function finds the first occurrence of any
+ * character from a specified string in another string. */
 
 char *_strstr(char *haystack, char *needle);
 /* This function finds the first occurrence of a string in another string. */
