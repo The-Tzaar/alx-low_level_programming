@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
- * Copies the string pointed to by src to dest.
+ * _strcpy - Copies the string pointed to by src to dest.
  *
- * Returns: A pointer to dest.
+ * Return: A pointer to dest.
  *
- * @param dest The destination string.
- * @param src The source string.
+ * @dest: The destination string.
+ * @src: The source string.
  */
 char *_strcpy(char *dest, char *src)
 {

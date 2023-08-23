@@ -1,14 +1,14 @@
 #include "main.h"
 /**
- * Compares two strings lexicographically.
+ * _strcmp - Compares two strings lexicographically.
  *
- * Returns:
+ * Return:
  *   * A negative integer if s1 is less than s2.
  *   * 0 if s1 is equal to s2.
  *   * A positive integer if s1 is greater than s2.
  *
- * @param s1 The first string to compare.
- * @param s2 The second string to compare.
+ * @s1: The first string to compare.
+ * @s2: The second string to compare.
  */
 int _strcmp(char *s1, char *s2)
 {

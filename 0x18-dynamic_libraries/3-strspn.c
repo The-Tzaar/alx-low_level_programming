@@ -1,10 +1,12 @@
 #include "main.h"
 /**
- * _strspn - Returns the number of bytes in the initial segment of the string pointed to by str1 that consist only of bytes from the string pointed to by str2.
+ * _strspn - Returns the number of bytes in the initial segment
+ * of the string pointed to by str1 that consist only of bytes
+ * from the string pointed to by str2.
  * @s: The string to search.
  * @accept: The string of bytes to search for.
  *
- * Returns: The number of bytes in s that consist of bytes from accept.
+ * Return: The number of bytes in s that consist of bytes from accept.
  */
 unsigned int _strspn(char *s, char *accept)
 {

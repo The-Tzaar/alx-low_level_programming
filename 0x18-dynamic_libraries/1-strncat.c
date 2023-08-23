@@ -5,7 +5,7 @@
  * @src: Pointer to the source string
  * @n: The maximum number of bytes to copy from the source string
  *
- * Returns: A pointer to the destination string
+ * Return: A pointer to the destination string
  */
 char *_strncat(char *dest, char *src, int n)
 {
