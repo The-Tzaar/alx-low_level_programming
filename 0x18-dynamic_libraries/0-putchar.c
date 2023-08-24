@@ -1,16 +1,17 @@
-#include <unistd.h>
+#include "main.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <ctype.h>
+#include <string.h>
 
-/*
- * _putchar - Writes the character c to stdout.
- *
- * @c: The character to print
- *
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
+/**
+ * _putchar - this is the desc. for function.
+ * @c: desc. for c
+ * Return: putchar
  */
+
 int _putchar(char c)
 {
-	/* Writes the character c to stdout. */
-	return (write(1, &c, 1));
+	return (putchar(c));
 }
 
